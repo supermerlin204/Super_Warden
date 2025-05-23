@@ -13,7 +13,7 @@ public class SWAnimations {
     @SubscribeEvent
     public static void registerAnimations(AnimationManager.AnimationRegistryEvent event) {
         event.newBuilder(SWMOD.MOD_ID, (builder)->{
-            SuperWardenAnimation.buildVFXAnimations(builder);
+            SuperWardenAnimation.buildAnimations(builder);
 
 
 
