@@ -87,7 +87,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
     implementation fg.deobf("libs:EpicFight:20.10.5")
-    implementation fg.deobf("libs:epic_fight_avalon:20.10.101")
+    implementation fg.deobf("libs:epic_fight_avalon:20.10.200")
 //    implementation fg.deobf("libs:invincible:20.10.0")
     implementation fg.deobf("curse.maven:mmmmmmmmmmmm-225738:6237015")
     implementation fg.deobf("curse.maven:selene-499980:6283242")
@@ -111,6 +111,10 @@ tasks.named('processResources', ProcessResources).configure {
     filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
         expand replaceProperties + [project: project]
     }
+}
+
+jar {
+    manifest.attributes('FMLAT': 'accesstransformer.cfg')
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

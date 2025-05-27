@@ -8,6 +8,7 @@ import java.util.Map;
 public class SWArmature extends Armature {
     public final Joint arm_down_L;
     public final Joint arm_down_R;
+    public final Joint head;
 
 
 
@@ -16,6 +17,7 @@ public class SWArmature extends Armature {
         super(name, jointNumber, rootJoint, jointMap);
         arm_down_L = getOrLogException(jointMap, "arm_down_L");
         arm_down_R = getOrLogException(jointMap, "arm_down_R");
+        head = getOrLogException(jointMap, "head");
 
 
     }

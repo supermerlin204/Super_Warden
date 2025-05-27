@@ -76,7 +76,7 @@ side="BOTH"
 [[dependencies.${mod_id}]]
 modId="epic_fight_avalon"
 mandatory=true
-versionRange="[20.10.101,)"
+versionRange="[20.10.200,)"
 ordering="AFTER"
 side="BOTH"
 
