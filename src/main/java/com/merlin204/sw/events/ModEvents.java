@@ -16,7 +16,6 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void setPatch(EntityPatchRegistryEvent event) {
-//        event.getTypeEntry().put(SWEntities.BLADEWAVE.get(), (entity) -> BladeWavePatch::new);
         event.getTypeEntry().put(EntityType.WARDEN,(entity -> SWPatch::new));
 
     }

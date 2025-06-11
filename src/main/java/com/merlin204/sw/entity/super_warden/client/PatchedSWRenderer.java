@@ -20,7 +20,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import yesman.epicfight.api.asset.AssetAccessor;
 import yesman.epicfight.api.model.Armature;
 import yesman.epicfight.client.renderer.patched.entity.PatchedLivingEntityRenderer;
-import yesman.epicfight.mixin.MixinLivingEntityRenderer;
+import yesman.epicfight.mixin.client.MixinLivingEntityRenderer;
 
 @OnlyIn(Dist.CLIENT)
 

@@ -6,9 +6,7 @@ import com.merlin204.sw.main.SWMOD;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.Brain;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -20,10 +18,12 @@ import net.minecraft.world.entity.ai.behavior.warden.SonicBoom;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.monster.warden.Warden;
 import net.minecraft.world.entity.schedule.Activity;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.EntityAttributeModificationEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import yesman.epicfight.api.animation.*;
+import yesman.epicfight.api.animation.Pose;
 import yesman.epicfight.api.animation.types.DynamicAnimation;
 import yesman.epicfight.api.animation.types.StaticAnimation;
 import yesman.epicfight.api.utils.math.MathUtils;
@@ -69,6 +69,16 @@ public class SWPatch extends MobPatch<Warden> {
     @Override
     protected void selectGoalToRemove(Set<Goal> toRemove) {
 
+    }
+
+    @Override
+    public void rotateTo(Entity target, float limit, boolean syncPrevRot) {
+        if (target != null){
+            Vec3 playerPosition = (this.original).position();
+            Vec3 targetPosition = target.position();
+            float yaw = (float)MathUtils.getYRotOfVector(targetPosition.subtract(playerPosition));
+            this.rotateTo(yaw, limit, syncPrevRot);
+        }
     }
 
     @Override

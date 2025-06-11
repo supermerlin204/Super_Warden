@@ -17,7 +17,6 @@ import yesman.epicfight.api.client.forgeevent.PatchedRenderersEvent;
 public class ClientModEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
-//        EntityRenderers.register(SWEntities.BLADEWAVE.get(), SWRenderer::new);
         EntityRenderers.register(EntityType.WARDEN, SWRenderer::new);
 
 
@@ -25,7 +24,6 @@ public class ClientModEvents {
 
     @SubscribeEvent
     public static void onPatchedRenderer(PatchedRenderersEvent.Add event){
-//        event.addPatchedEntityRenderer(SWEntities.BLADEWAVE.get(), entityType -> new PatchedBladeWaveRenderer(event.getContext(), entityType).initLayerLast(event.getContext(), entityType));
         event.addPatchedEntityRenderer(EntityType.WARDEN,entityType -> new PatchedSWRenderer(event.getContext(),entityType).initLayerLast(event.getContext(),entityType));
     }
 

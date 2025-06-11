@@ -69,14 +69,14 @@ description='''${mod_description}'''
 [[dependencies.${mod_id}]]
 modId="epicfight"
 mandatory=true
-versionRange="[20.10.5,)"
+versionRange="[20.11.6,)"
 ordering="AFTER"
 side="BOTH"
 
 [[dependencies.${mod_id}]]
 modId="epic_fight_avalon"
 mandatory=true
-versionRange="[20.10.200,)"
+versionRange="[20.11.3,)"
 ordering="AFTER"
 side="BOTH"
 

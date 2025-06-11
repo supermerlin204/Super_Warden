@@ -34,8 +34,11 @@ public class SWMOD {
 
 
     private void client(final FMLClientSetupEvent event) {
+
         MinecraftForge.EVENT_BUS.register(new ForgeModEvents());
-    };
+
+
+    }
 
 
 

@@ -70,7 +70,7 @@ public class SuperWardenAnimation {
         SW_CHASE = builder.nextAccessor("super_warden_chase", accessor -> new AvalonMovementAnimation(0.15F,true, accessor, armature,1.8F));
 
         SW_ATK_1_1 = builder.nextAccessor("super_warden_atk_1_1", accessor -> new AvalonAttackAnimation(0.1F, accessor, armature,0.8F,
-                createSimplePhase(30,45,60, InteractionHand.MAIN_HAND,armature.get().arm_down_R,WARDEN_ARM)));
+                createSimplePhase(30,45,60, InteractionHand.MAIN_HAND,     armature.get().arm_down_R,WARDEN_ARM)));
 
         SW_ATK_1_2 = builder.nextAccessor("super_warden_atk_1_2", accessor -> new AvalonAttackAnimation(0.15F, accessor, armature,0.8F,
                 createSimplePhase(35,40,60, InteractionHand.MAIN_HAND,armature.get().arm_down_R,WARDEN_ARM),
